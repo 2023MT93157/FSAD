@@ -1,0 +1,44 @@
+{% extends "masterLayout.html" %}
+{% block content %}
+<div class="container">
+    <div class="col-md-6">
+        <img src="{{url_for('static', filename='loginpage.jpg')}}" class="img-rounded modeling">
+    </div>
+    <div class="col-md-6">
+        <h2 class="text-primary">Welcome!</h2>
+        <p class="ws">Start your journey of books and embrace the joy of a book exchange—share stories, gain new perspectives, and build a community of readers!</p>
+        <br/>
+        <div class = "form-group">
+            <div class="col-md-4">
+                <a class = "option" href="/buyBook"> Buy Book </a>
+            </div>
+            <div class="col-md-4 text-right">
+                <a class = "option" href="/sellBook"> Sell Book </a>
+            </div>
+        </div>
+        <br/>
+        <div class="col-md-12">
+            <p class="content">
+                <br/>
+                In quiet corners, their wisdom hides,
+                <br/>
+                Stories of worlds where dreams reside.
+                <br/>
+                With worn-out spines and pages aged,
+                <br/>
+                A thousand lives are softly caged.
+                <br/>
+                <br/>
+                Each word a spark, each tale a flame,
+                <br/>
+                Binding hearts to magic’s name.
+                <br/>
+                Books are bridges, vast and wide,
+                <br/>
+                To lands where wonder and thought collide.
+                <br/>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

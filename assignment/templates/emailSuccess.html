@@ -1,0 +1,41 @@
+{% extends "masterLayout.html" %}
+{% block content %}
+<div class="alert alert-success">
+    <strong>Success!</strong> Email sent Successfully!.
+</div>
+<script>
+    function sendRowData(button) {
+        const row = button.closest('tr');
+        const cells = row.querySelectorAll('td');
+        const rowData = Array.from(cells).map(cell => cell.textContent);
+        fetch('/sendEmail', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ rowData: rowData })
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Response from server:', data);
+            alert('Order processed successfully!');
+        })
+        .catch(error => console.error('Error:', error));
+    }
+</script>
+<table class="table table-bordered">
+    <thead>
+        <th>Book Name</th>
+        <th>Author</th>
+        <th>Seller Name</th>
+        <th>Seller Email</th>
+        <th>Click To Order</th>
+    </thead>
+    {% for row in data %}
+    <tr>
+        {% for col in row.items() %}
+        <td>{{col[1]}}</td>
+        {% endfor %}
+        <td><button class="option" onclick="sendRowData(this)">Order</button></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

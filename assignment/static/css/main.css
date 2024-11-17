@@ -1,0 +1,57 @@
+body
+{
+    background: linear-gradient(white, lightblue);
+    background-color: c;
+    background-attachment: fixed;
+    color: black;
+}
+.links
+{
+    list-style: none;
+}
+.links li a
+{
+    color: black;
+    text-decoration-line: underline;
+}
+.modeling
+{
+    height:500px;
+}
+.modeling_1
+{
+    height:400px;
+}
+.ws
+{
+    color:gray;
+}
+.content
+{
+    font-family: cursive;
+    font-size: medium;
+    font-weight: 200;
+    justify-content: flex-end;
+    color: black;
+}
+.success
+{
+    color: darkgreen;
+}
+.danger
+{
+    color: maroon;
+}
+.option {
+    display: block;
+    width: 115px;
+    height: 50px;
+    background: #4E9CAF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+    border: none;
+}

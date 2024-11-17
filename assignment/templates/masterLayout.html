@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>BookBuddy</title>
+  <link rel="icon" type="image/x-icon" href="../static/icon.jpg">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class = "navbar navbar-inverse" role = "navigation">
+   
+                    <div class = "navbar-header">
+                       <a class = "navbar-brand" href = "{{url_for('index')}}">BookBuddy</a>
+                    </div>
+                 </nav>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+           {% block content %}
+           {% endblock %}
+        </div>
+        <br/>
+        <div class="row">
+           <div class="container">
+              <div class="col-md-6">
+                 <p>
+                  <h4>About Us</h4>
+                  Swap Stories, Share Knowledge – Join the Book Exchange Revolution!
+                     <br/>
+                  <small>
+                     &copy; 2024 BookBuddy.com. All Rights Reserved.
+                 </small>
+                 </p>
+               </div>
+               <div class="col-md-6">
+                  <h4>Contacts</h4>
+                  <p><b>Email:</b></p>
+                  <p>BookBuddy@bookworld.com</p>
+                  <p><b>Phone No.s:</b></p>
+                  <p>0111-0111</p>
+                  <p>0555-0055</p>
+               </div>
+           </div>
+        </div>
+    </div>
+</body>
+</html>
