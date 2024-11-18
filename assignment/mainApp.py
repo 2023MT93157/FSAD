@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'MySQL@2020'
+app.config['MYSQL_PASSWORD'] = <password>
 app.config['MYSQL_DB'] = 'BookBuddy'
 
 mysql = MySQL(app)
@@ -16,8 +16,8 @@ app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
-app.config['MAIL_USERNAME'] = 'ssdulam@gmail.com'
-app.config['MAIL_PASSWORD'] = 'wjpx jzoc zfft uuom'
+app.config['MAIL_USERNAME'] = <email>
+app.config['MAIL_PASSWORD'] = <password>
 
 mail = Mail(app)
 
